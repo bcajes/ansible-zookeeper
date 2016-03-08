@@ -4,9 +4,8 @@
   tags: bootstrap
 
 - name: Apt install required system packages.
-  apt: pkg={{item}} state=installed
+  apt: pkg={{item}} state=present force=yes
   tags: bootstrap
-  force: yes
   with_items:
     - zookeeper
     - zookeeperd
